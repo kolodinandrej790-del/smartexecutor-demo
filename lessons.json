@@ -1,0 +1,11 @@
+[
+  {
+    "symbol": "ETH-USDT",
+    "side": "SELL",
+    "entry": 2478.49,
+    "exit": 2516.05,
+    "profit": -0.075,
+    "reason": "SL",
+    "timestamp": "2026-09-09 13:03:12"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "datetime": "2026-06-03 01:59:54",
+    "asset": "ETH/USDT",
+    "direction": "SELL",
+    "entry": 4490,
+    "stop_loss": 4539.06,
+    "take_profit": 4430,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500. Шип 0.67%. Объём 500/1000."
+  },
+  {
+    "id": 2,
+    "datetime": "2026-06-03 02:07:54",
+    "asset": "ETH/USDT",
+    "direction": "SELL",
+    "entry": 4490,
+    "stop_loss": 4539.06,
+    "take_profit": 4430,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500. Шип 0.67%. Объём 500/1000."
+  },
+  {
+    "id": 3,
+    "datetime": "2026-06-03 02:13:25",
+    "asset": "ETH/USDT",
+    "direction": "SELL",
+    "entry": 4490,
+    "stop_loss": 4539.06,
+    "take_profit": 4430,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500. Шип 0.67%. Объём 500/1000."
+  },
+  {
+    "id": 4,
+    "datetime": "2026-06-03 02:18:46",
+    "asset": "ETH/USDT",
+    "direction": "SELL",
+    "entry": 4490,
+    "stop_loss": 4539.06,
+    "take_profit": 4430,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500. Шип 0.67%. Объём 500/1000."
+  },
+  {
+    "id": 5,
+    "datetime": "2026-06-03 02:18:46",
+    "asset": "BTC/USDT",
+    "direction": "SELL",
+    "entry": 59900,
+    "stop_loss": 60621.0,
+    "take_profit": 58900,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 60000. Шип 0.83%. Объём 400/1000."
+  },
+  {
+    "id": 6,
+    "datetime": "2026-06-03 02:33:17",
+    "asset": "MANUAL",
+    "direction": "SELL",
+    "entry": 4490.0,
+    "stop_loss": 4539.06,
+    "take_profit": 4430.0,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500.0. Шип 0.67%. Объём 500.0/1000.0."
+  },
+  {
+    "id": 7,
+    "datetime": "2026-06-03 02:35:11",
+    "asset": "MANUAL",
+    "direction": "SELL",
+    "entry": 4490.0,
+    "stop_loss": 4539.06,
+    "take_profit": 4430.0,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500.0. Шип 0.67%. Объём 500.0/1000.0."
+  },
+  {
+    "id": 8,
+    "datetime": "2026-06-03 02:35:31",
+    "asset": "MANUAL",
+    "direction": "SELL",
+    "entry": 4490.0,
+    "stop_loss": 4539.06,
+    "take_profit": 4430.0,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Стоп-ран над уровнем 4500.0. Шип 0.67%. Объём 500.0/1000.0."
+  },
+  {
+    "id": 9,
+    "datetime": "2026-06-06 19:10:00",
+    "asset": "MANUAL",
+    "direction": "BUY",
+    "entry": 95.0,
+    "stop_loss": 79.84,
+    "take_profit": 117.5,
+    "strategy": "institutional",
+    "result": null,
+    "reason": "Разворот после каскада ликвидаций. Шип вниз до 80.0. Объём 50000.0/20000.0."
+  }
+]
