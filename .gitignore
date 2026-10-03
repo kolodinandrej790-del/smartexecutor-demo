@@ -1,9 +1,11 @@
-# Защита ключей и секретов (важно!)
+# ========== СЕКРЕТЫ (никогда не коммитим) ==========
 keys.txt
 *.pem
 .env
+.env.local
+*.key
 
-# Python
+# ========== PYTHON ==========
 __pycache__/
 *.py[codz]
 *$py.class
@@ -27,30 +29,54 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Логи
-*.log
-
-# Тесты и кэш
-.pytest_cache/
-.coverage
-.tox/
-.nox/
-.hypothesis/
-
-# Окружения
+# ========== ВИРТУАЛЬНЫЕ ОКРУЖЕНИЯ ==========
 .venv
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
-# IDE
+# ========== ТЕСТЫ И КЭШ ==========
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+.tox/
+.nox/
+.hypothesis/
+htmlcov/
+
+# ========== ОТЛАДОЧНЫЕ СКРИПТЫ ==========
+# Не коммитим отладку — она для локальной работы
+debug_*.py
+
+# ========== СТАРЫЕ ТЕСТЫ (не наши) ==========
+test_cmc.py
+test_binance.py
+test_bybit.py
+test_kraken.py
+test_arbitrage_internal.py
+demo.py
+
+# ========== IDE ==========
 .vscode/
 .idea/
-.abstra/
+*.swp
+*.swo
+*~
 
-# Ruff, PyPI
-.ruff_cache/
-.pypirc
+# ========== ЛОГИ ==========
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Streamlit
-.streamlit/secrets.toml
+# ========== OS ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== ВРЕМЕННЫЕ ФАЙЛЫ ==========
+*.tmp
+*.bak
+tempCodeRunnerFile.py

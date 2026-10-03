@@ -1,0 +1,283 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-28",
+  "description": "Реестр модулей, профилей и intent-маппинг для SmartExecutor",
+
+  "modules": {
+    "SE-M-01": {
+      "name": "InfoSense",
+      "role": "Сбор новостей, анонсов, событий",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-02": {
+      "name": "TrendAnalyzer",
+      "role": "Тренд, фазы, сессии",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-03": {
+      "name": "Scanner",
+      "role": "Поиск возможностей по рынку",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-04": {
+      "name": "TradeAnalyzer",
+      "role": "Разбор сделок постфактум",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-05": {
+      "name": "ContextGate",
+      "role": "Фильтр сигналов, рекомендация профиля",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-06": {
+      "name": "Methodist",
+      "role": "Оркестратор сравнения (ensemble)",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-07": {
+      "name": "Supervisor",
+      "role": "Аудит модулей",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-08": {
+      "name": "HallucinationGuard",
+      "role": "Проверка фактов (числа, события, время)",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-09": {
+      "name": "LevelBuilder",
+      "role": "Структурные данные для стратегий",
+      "critical": true,
+      "status": "planned"
+    },
+    "SE-M-10": {
+      "name": "TraderSense",
+      "role": "Интерпретация рынка",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-11": {
+      "name": "Архивариус",
+      "role": "Хранение confidence (confidence.jsonl)",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-12": {
+      "name": "InstitutionalCore",
+      "role": "Стратегия «Охотник за ликвидностью»",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-13": {
+      "name": "RiskManager",
+      "role": "Риск-менеджмент",
+      "critical": true,
+      "status": "exists"
+    },
+    "SE-M-14": {
+      "name": "PsychologyGuard",
+      "role": "Дисциплина (серии убытков, дневной лимит)",
+      "critical": true,
+      "status": "exists"
+    },
+    "SE-M-15": {
+      "name": "OKXConnector",
+      "role": "Связь с OKX (публичные данные + торговля)",
+      "critical": true,
+      "status": "exists"
+    },
+    "SE-M-16": {
+      "name": "BybitConnector",
+      "role": "Связь с Bybit (публичные данные)",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-17": {
+      "name": "TradeArchive",
+      "role": "Журнал сделок",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-18": {
+      "name": "KnowledgeBase",
+      "role": "Справочник терминов",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-19": {
+      "name": "StrategyPool",
+      "role": "Контейнер стратегий",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-20": {
+      "name": "PositionManager",
+      "role": "Сопровождение позиций",
+      "critical": true,
+      "status": "exists"
+    },
+    "SE-M-21": {
+      "name": "MarketCaseArchive",
+      "role": "Архив кейсов рынка",
+      "critical": false,
+      "status": "planned"
+    },
+    "SE-M-22": {
+      "name": "CMCConnector",
+      "role": "Связь с CoinMarketCap",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-23": {
+      "name": "ArbitrageScanner",
+      "role": "Межбиржевой арбитраж",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-24": {
+      "name": "BinanceConnector",
+      "role": "Связь с Binance (публичные данные)",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-25": {
+      "name": "KrakenConnector",
+      "role": "Связь с Kraken (публичные данные)",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-26": {
+      "name": "BasisScanner",
+      "role": "Внутрибиржевой арбитраж (базис)",
+      "critical": false,
+      "status": "exists"
+    },
+    "SE-M-27": {
+      "name": "Архивариус",
+      "role": "Хранение confidence",
+      "critical": false,
+      "status": "planned"
+    }
+  },
+
+  "intents": {
+    "prepare_data": ["SE-M-09"],
+    "interpret_data": ["SE-M-10"],
+    "evaluate_market": ["SE-M-01", "SE-M-02", "SE-M-03"],
+    "compare_outputs": ["SE-M-06"],
+    "check_signal": ["SE-M-05", "SE-M-13", "SE-M-14"],
+    "execute_trade": ["SE-M-19", "SE-M-15", "SE-M-20"],
+    "analyze_trade": ["SE-M-04"],
+    "audit_system": ["SE-M-07"],
+    "verify_fact": ["SE-M-08"],
+    "store_confidence": ["SE-M-11"]
+  },
+
+  "profiles": {
+    "spot_long": {
+      "description": "Спот, покупка, ожидание роста",
+      "td_mode": "cash",
+      "side": "buy",
+      "risk_percent": 2,
+      "max_deals": 5,
+      "max_consecutive_losses": 3,
+      "daily_loss_percent": 5,
+      "style": "intraday",
+      "modules": ["SE-M-09", "SE-M-10", "SE-M-12", "SE-M-05", "SE-M-13", "SE-M-14", "SE-M-15", "SE-M-20", "SE-M-17"]
+    },
+    "spot_short": {
+      "description": "Спот, продажа (если актив есть)",
+      "td_mode": "cash",
+      "side": "sell",
+      "risk_percent": 2,
+      "max_deals": 5,
+      "max_consecutive_losses": 3,
+      "daily_loss_percent": 5,
+      "style": "intraday",
+      "modules": ["SE-M-09", "SE-M-10", "SE-M-12", "SE-M-05", "SE-M-13", "SE-M-14", "SE-M-15", "SE-M-20", "SE-M-17"]
+    },
+    "futures_long": {
+      "description": "Фьючерс, лонг, плечо",
+      "td_mode": "cross",
+      "side": "buy",
+      "leverage": 3,
+      "risk_percent": 1,
+      "max_deals": 3,
+      "max_consecutive_losses": 2,
+      "daily_loss_percent": 3,
+      "style": "intraday",
+      "modules": ["SE-M-09", "SE-M-10", "SE-M-12", "SE-M-05", "SE-M-13", "SE-M-14", "SE-M-15", "SE-M-20", "SE-M-17"]
+    },
+    "futures_short": {
+      "description": "Фьючерс, шорт, плечо",
+      "td_mode": "cross",
+      "side": "sell",
+      "leverage": 3,
+      "risk_percent": 1,
+      "max_deals": 3,
+      "max_consecutive_losses": 2,
+      "daily_loss_percent": 3,
+      "style": "intraday",
+      "modules": ["SE-M-09", "SE-M-10", "SE-M-12", "SE-M-05", "SE-M-13", "SE-M-14", "SE-M-15", "SE-M-20", "SE-M-17"]
+    },
+    "arbitrage_cross": {
+      "description": "Межбиржевой арбитраж",
+      "threshold": 0.5,
+      "risk_percent": 1,
+      "max_deals": 10,
+      "max_consecutive_losses": 5,
+      "daily_loss_percent": 2,
+      "style": "scalping",
+      "modules": ["SE-M-23", "SE-M-13", "SE-M-14", "SE-M-15", "SE-M-24", "SE-M-16", "SE-M-25", "SE-M-17"]
+    },
+    "arbitrage_basis": {
+      "description": "Внутрибиржевой арбитраж (базис)",
+      "threshold": 0.2,
+      "risk_percent": 1,
+      "max_deals": 5,
+      "max_consecutive_losses": 5,
+      "daily_loss_percent": 2,
+      "style": "scalping",
+      "modules": ["SE-M-26", "SE-M-13", "SE-M-14", "SE-M-16", "SE-M-17"]
+    }
+  },
+
+  "comparisons": [
+    {
+      "modules": ["SE-M-10", "SE-M-02"],
+      "fields": ["direction", "volatility_level"],
+      "tolerance": "exact"
+    },
+    {
+      "modules": ["SE-M-09", "SE-M-10"],
+      "fields": ["stop_hunt_likely"],
+      "tolerance": "exact"
+    },
+    {
+      "modules": ["SE-M-24", "SE-M-25"],
+      "fields": ["price"],
+      "tolerance": 0.02
+    }
+  ],
+
+  "assets": {
+    "BTC": {"priority": 1, "category": "major"},
+    "ETH": {"priority": 1, "category": "major"},
+    "LTC": {"priority": 2, "category": "major"},
+    "XAUT": {"priority": 2, "category": "rwa"},
+    "PAXG": {"priority": 2, "category": "rwa"},
+    "SOL": {"priority": 3, "category": "altcoin"},
+    "XRP": {"priority": 3, "category": "altcoin"},
+    "BNB": {"priority": 3, "category": "altcoin"},
+    "ADA": {"priority": 3, "category": "altcoin"},
+    "DOGE": {"priority": 3, "category": "altcoin"}
+  }
+}
